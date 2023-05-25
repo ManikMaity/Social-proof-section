@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    --very-dark-purple : hsl(300, 43%, 22%);
+    --pink : hsl(333, 80%, 67%);
+    --gray-purple : hsl(303, 10%, 53%);
+    --light-purple : hsl(300, 24%, 96%);
+}
+
+/* common styles  */
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   align-items: center;
+   justify-content: center;
+}
+.bg-pattern{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.bg-pattern-left{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+}
+
+
+p{
+    font-size: 15px;
+    line-height: 1.5em;
+}
+h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h1{
+    font-weight: 700;
+    color: var(--very-dark-purple);
+    font-size: 2.8em;
+}
+.header-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-tape{
+    display: flex;
+    width: 360px;
+    padding: 15px 0;
+    padding-left: 25px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--light-purple);
+}
+.tape1{
+    position: relative;
+    right: 80px;
+}
+.tape2{
+    position: relative;
+    right: 40px;
+}
+.card-tape h3{
+    color: var(--very-dark-purple);
+}
+
+.stars{
+    display: flex;
+    margin-right: 30px;
+    height: 13px;
+    gap: 7px;
+}
+
+.main-container{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 99;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 400px;
+}
+.header-left p{
+    color: var(--gray-purple);
+}
+
+.testimonial-sec{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: white;
+    gap: 25px;
+}
+.testimonial-card{
+    background-color: var(--very-dark-purple);
+    padding:30px;
+    border-radius: 8px;
+}
+.card-profile img{
+    border-radius: 40px;
+    width: 30px;
+}
+.card-profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.p-title p{
+    color: var(--pink);
+    font-size: 14px;
+}
+.card-text{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.card1{
+    position: relative;
+    bottom: 40px;
+}
+.card2{
+    position: relative;
+    bottom: 20px;
+}
+
+.attribution{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    color: var(--gray-purple);
+}
+.attribution a{
+    color: var(--pink);
+}
+@media (max-width:1050px){
+    
+    .header{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .header-left{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-container{
+        margin-top: 80px;
+        justify-content: center;
+        width: 100%;
+        margin-left: 10px;
+        width: 90%;
+    }
+    .tape1, .tape2{
+        position: static;
+    }
+    .header-right{
+        gap: 20px;
+        width: 100%;
+    }
+    .card-tape{
+        flex-direction: column;
+        gap:10px;
+        width: 100%;
+    }
+    .stars{
+        height: auto;
+    }
+    .testimonial-sec{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .testimonial-card{
+        position: static;
+    }
+    .header-left h1{
+        width: 80%;
+        font-size: 2.2em;
+
+    }
+    .bg-pattern-left, .bg-pattern{
+        display: none;
+    }
+}
